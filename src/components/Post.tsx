@@ -19,7 +19,7 @@ interface Content {
 interface ProstProps {
   author: Author;
   publishedAt: Date;
-  content: Content[];
+  content: Array<Content>;
 }
 
 export function Post({ author, publishedAt, content }: ProstProps) {

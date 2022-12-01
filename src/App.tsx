@@ -6,7 +6,21 @@ import css from './App.module.css'
 import { Sidebar } from './components/Sidebar'
 import { Fragment } from 'react'
 
-const posts = [
+interface postProps {
+  id: number;
+  author: {
+      avatarUrl: string;
+      name: string;
+      role: string;
+  };
+  content: {
+      type: "paragraph" | "link";
+      content: string;
+  }[];
+  publishedAt: Date;
+}
+
+const posts: postProps[] = [
   {
     id: 1,
     author: {
